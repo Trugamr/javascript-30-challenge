@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0px;
+    padding: 0px;    
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.keys {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(9, auto);
+    min-height: 100vh;
+}
+
+.key {
+    text-align: center;
+    background-color: red;
+    font-size: 1.5rem;
+    margin-right: 14px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 14px;
+    color: #505050;
+    background-color: white;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);     
+    transition: ease all 0.15s;
+    cursor: pointer;
+}
+
+.key:last-child {
+    margin-right: 0px;
+}
+
+kbd {
+    display: block;
+    line-height: 5rem;   
+    font-size: 2rem;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    font-weight: normal;
+    color: #303030;
+}
+
+.key kbd, .key span {
+    /* making clickthrough so they wont so they won't stop clicks on parent */ 
+    pointer-events: none;
+    /* disabling text seelection */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.playing {
+    color: #f0f0f0;
+    background-color: #303030;
+    transform: scale(1.1);
+}
+
+.playing > kbd {
+    color: #f0f0f0;
+}
