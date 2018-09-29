@@ -1,0 +1,55 @@
+:root {
+    --base: #f17cb4;
+    --spacing: 10px;
+    --blur: 0px;
+    --radius: 24px;
+}
+
+body {
+    background-color: rgb(28, 44, 94);
+    font-size: 10px; 
+    font-family: Montserrat, 'sans-serif';   
+    padding: 20px;
+}
+
+h2 {
+    color: #e0e0e0;
+    font-size: 2rem;
+}
+
+.hl {
+    font-size: 2.2rem;
+    color: var(--base);
+}
+
+.controls {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 80px;
+}
+
+.controls input {
+    height: 10px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+.controls input:last-child {
+    height: 20px;
+    border: none;
+    margin: none;
+    background-color: #e0e0e0;
+    margin-right: 0px;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 600px;
+    margin: auto;
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    border-radius: var(--radius);
+}
