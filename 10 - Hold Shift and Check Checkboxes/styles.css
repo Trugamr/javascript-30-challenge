@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(155, 250, 211);
+}
+
+.wrapper {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.item {
+    font-family: sans-serif;
+    border-bottom: 1px solid rgb(149, 225, 255);
+    padding: 0px 15px 0px 15px;
+}
+
+.item:last-child {
+    border: none;
+}
+
+.item p {
+    display: inline-block;
+    padding: 10px 0px 10px 10px;
+    border-left: 1px solid #D1E2FF;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input:checked + p {
+    text-decoration: line-through;
+}
