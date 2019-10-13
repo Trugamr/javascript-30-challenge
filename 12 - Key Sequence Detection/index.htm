@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./confetti.js"></script>
+    <title>Konfetti</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .confetti-holder {
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+    <canvas id="confetti-holder"></canvas>
+    <script>
+        let confettiSettings =
+        { "target": "confetti-holder", "max": "80", "size": "1", "animate": true, "props": ["square", "line"], "colors":
+        [[165, 104, 246], [230, 61, 135], [0, 199, 228], [253, 214, 126]], "clock": "25", "rotate": false }
+        let confetti = new ConfettiGenerator(confettiSettings);
+
+        const pressed = []
+        const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"]
+
+        // KONAMI DETECTION
+        window.addEventListener('keyup', (e) => {
+            // console.log(e.key)
+            pressed.push(e.key)
+            pressed.splice(-konamiCode.length - 1, pressed.length - konamiCode.length)
+            if(pressed.join('').includes(konamiCode.join(''))) confetti.render()
+            
+            // console.log(pressed)
+        })
+    </script>
+</body>
+</html>
